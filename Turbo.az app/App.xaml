@@ -6,8 +6,8 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Dictionaries\ButtonStyles.xaml"></ResourceDictionary>
-                <ResourceDictionary Source="Dictionaries\ComboBoxStyle.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Style\ColorStyle.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Style\ComboBoxStyle.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

@@ -86,7 +86,6 @@
     <Compile Include="DataAccess\Abstractions\IColorRepository.cs" />
     <Compile Include="DataAccess\Abstractions\IModelRepository.cs" />
     <Compile Include="DataAccess\Abstractions\IRepository.cs" />
-    <Compile Include="DataAccess\Abstractions\IStatusRepository.cs" />
     <Compile Include="DataAccess\Abstractions\IUnitOfWork.cs" />
     <Compile Include="DataAccess\Concrete\EFBodyTypeRepository.cs" />
     <Compile Include="DataAccess\Concrete\EFBrandRepository.cs" />
@@ -94,7 +93,6 @@
     <Compile Include="DataAccess\Concrete\EFCityRepository.cs" />
     <Compile Include="DataAccess\Concrete\EFColorRepository.cs" />
     <Compile Include="DataAccess\Concrete\EFModelRepository.cs" />
-    <Compile Include="DataAccess\Concrete\EFStatusRepository.cs" />
     <Compile Include="DataAccess\Concrete\UnitOfWork.cs" />
     <Compile Include="DataAccess\TurboAzContext.cs" />
     <Compile Include="Domain\ViewModel\BaseViewModel.cs" />
@@ -126,9 +124,7 @@
     <Compile Include="Entities\Mapping\ColorMap.cs" />
     <Compile Include="Entities\Mapping\FuelTypeMap.cs" />
     <Compile Include="Entities\Mapping\ModelMap.cs" />
-    <Compile Include="Entities\Mapping\StatusMap.cs" />
     <Compile Include="Entities\Model.cs" />
-    <Compile Include="Entities\Status.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

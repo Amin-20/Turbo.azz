@@ -15,7 +15,6 @@ namespace Turbo.az_app.Entities.Mapping
 
             this.Property(c => c.ColorId).HasColumnName("ColorId");
             this.Property(c => c.ModelId).HasColumnName("ModelId");
-            this.Property(c => c.StatusId).HasColumnName("StatusId");
             this.Property(c => c.BodyTypeId).HasColumnName("BodyTypeId");
             this.Property(c => c.CityId).HasColumnName("CityId");
 
@@ -23,6 +22,9 @@ namespace Turbo.az_app.Entities.Mapping
                 .IsRequired();
 
             this.Property(c => c.Price)
+                .IsRequired();
+
+            this.Property(c => c.IsNew)
                 .IsRequired();
 
         }
