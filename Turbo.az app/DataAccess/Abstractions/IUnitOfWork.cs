@@ -14,5 +14,7 @@ namespace Turbo.az_app.DataAccess.Abstractions
         ICityRepository cityRepository { get; }
         IColorRepository colorRepository { get; }
         IModelRepository modelRepository { get; }
+        IFuelTypeRepository fuelTypeRepository { get; }
+       
     }
 }

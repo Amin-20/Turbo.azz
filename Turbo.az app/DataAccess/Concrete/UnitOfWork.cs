@@ -21,5 +21,6 @@ namespace Turbo.az_app.DataAccess.Concrete
 
         public IModelRepository modelRepository =>new EFModelRepository();
 
+        public IFuelTypeRepository fuelTypeRepository => new EFFuelTypeRepository();
     }
 }

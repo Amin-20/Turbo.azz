@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
+using Turbo.az_app.Entities;
 using Turbo.az_app.Entities.Mapping;
 
 namespace Turbo.az_app.DataAccess
@@ -24,6 +26,7 @@ namespace Turbo.az_app.DataAccess
             modelBuilder.Configurations.Add(new CarMap());
             modelBuilder.Configurations.Add(new CityMap());
             modelBuilder.Configurations.Add(new ColorMap());
+            modelBuilder.Configurations.Add(new FuelTypeMap());
         }
 
         public DbSet<Brand> Brands { get; set; }
@@ -32,6 +35,7 @@ namespace Turbo.az_app.DataAccess
         public DbSet<City> Cities { get; set; }
         public DbSet<Color> Colors { get; set; }
         public DbSet<BodyType> BodyTypes { get; set; }
+        public DbSet<FuelType> FuelTypes  { get; set; }
 
     }
 }

@@ -1,40 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Controls;
 using Turbo.az_app.DataAccess.Abstractions;
-using Turbo.az_app.Entities.Mapping;
+using Turbo.az_app.Entities;
 
 namespace Turbo.az_app.DataAccess.Concrete
 {
-    public class EFBrandRepository : IBrandRepository
+    public class EFFuelTypeRepository : IFuelTypeRepository
     {
         TurboAzContext _context = new TurboAzContext();
-        public void AddData(Brand data)
+        public void AddData(FuelType data)
         {
-            _context.Brands.Add(data);
+            _context.FuelTypes.Add(data);
             _context.SaveChanges();
         }
 
-        public void DeleteData(Brand data)
+        public void DeleteData(FuelType data)
         {
             throw new NotImplementedException();
         }
 
-        public ICollection<Brand> GetAll()
-        {
-            return _context.Brands.ToList();
-        }
-
-        public Brand GetData(int id)
+        public ICollection<FuelType> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public void UpdateData(Brand data)
+        public FuelType GetData(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateData(FuelType data)
         {
             throw new NotImplementedException();
         }

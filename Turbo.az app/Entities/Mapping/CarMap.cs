@@ -27,6 +27,9 @@ namespace Turbo.az_app.Entities.Mapping
             this.Property(c => c.IsNew)
                 .IsRequired();
 
+            this.Property(c => c.Engine)
+                .IsRequired();
+
         }
     }
 }

@@ -19,6 +19,8 @@ namespace Turbo.az_app.Entities.Mapping
         public DateTime ProdYear { get; set; }
         public string ImagePath { get; set; }
         public int FuelTypeId { get; set; }
+        public string Engine { get; set; }
+
 
         public virtual Color Color { get; set; }
         public virtual Model Model { get; set; }
