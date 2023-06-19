@@ -24,7 +24,7 @@ namespace Turbo.az_app.DataAccess.Concrete
 
         public ICollection<FuelType> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.FuelTypes.ToList();
         }
 
         public FuelType GetData(int id)
