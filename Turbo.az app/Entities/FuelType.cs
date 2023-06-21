@@ -13,5 +13,11 @@ namespace Turbo.az_app.Entities
         public string FuelName { get; set; }
 
         public virtual ICollection<Car> Cars { get; set; }
+
+        public override string ToString()
+        {
+            return FuelName;
+        }
+
     }
 }

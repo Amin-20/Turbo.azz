@@ -11,5 +11,10 @@ namespace Turbo.az_app.Entities.Mapping
         public int Id { get; set; }
         public string ColorName { get; set; }
         public virtual ICollection<Car> Cars { get; set; }
+
+        public override string ToString()
+        {
+            return ColorName;
+        }
     }
 }

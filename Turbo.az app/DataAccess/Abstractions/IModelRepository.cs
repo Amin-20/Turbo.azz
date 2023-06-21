@@ -9,5 +9,6 @@ namespace Turbo.az_app.DataAccess.Abstractions
 {
     public interface IModelRepository:IRepository<Model>
     {
+        ICollection<Model> GetAllId(int id);
     }
 }

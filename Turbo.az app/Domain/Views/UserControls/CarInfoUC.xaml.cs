@@ -12,21 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Turbo.az_app.Domain.ViewModel;
 
-namespace Turbo.az_app
+namespace Turbo.az_app.Domain.Views.UserControls
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CarInfoUC.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CarInfoUC : UserControl
     {
-        public MainWindow()
+        public CarInfoUC()
         {
             InitializeComponent();
-            App.CarWrapPanel = myCarWrapPanel;
-            var vm=new MainWindowViewModel();
-            this.DataContext = vm;
         }
     }
 }

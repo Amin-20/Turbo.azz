@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using Turbo.az_app.DataAccess.Abstractions;
 using Turbo.az_app.DataAccess.Concrete;
 using Turbo.az_app.Entities;
@@ -17,6 +18,7 @@ namespace Turbo.az_app
     /// </summary>
     public partial class App : Application
     {
+        public static WrapPanel CarWrapPanel { get; set; } = new WrapPanel();
         public static IUnitOfWork DB;
         public App()
         {

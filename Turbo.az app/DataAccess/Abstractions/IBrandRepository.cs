@@ -9,5 +9,6 @@ namespace Turbo.az_app.DataAccess.Abstractions
 {
     public interface IBrandRepository:IRepository<Brand>
     {
+
     }
 }

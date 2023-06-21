@@ -12,5 +12,10 @@ namespace Turbo.az_app.Entities.Mapping
         public int Id { get; set; } 
         public string BrandName { get; set; }    
         public virtual ICollection<Model> Models { get; set; }
+
+        public override string ToString()
+        {
+            return BrandName;
+        }
     }
 }
