@@ -99,7 +99,7 @@ namespace Turbo.az_app.Domain.ViewModel
             {
                 carUC = new CarUC();
                 carUCViewModel = new CarUCViewModel();
-                carUCViewModel.SelectedCar= cars[i];
+                carUCViewModel.SelectedCar = cars[i];
                 carUCViewModel.CarImagePath = cars[i].ImagePath;
                 carUCViewModel.CarPrice = $"{cars[i].Price} ₼";
                 carUCViewModel.CarModelBrandInfo = $"{cars[i].Model.Brand.BrandName} {cars[i].Model.ModelName}";
@@ -133,18 +133,28 @@ namespace Turbo.az_app.Domain.ViewModel
 
             ShowCommand = new RelayCommand((obj) =>
             {
-                if (!IsModelSelected || isAll)
+                if (!IsBrandSelected && isNew)
+                {
+                    var allCars = Cars.Where(c => c.IsNew).ToList();
+                    CallCarUc(allCars);
+                };
+                if (!IsBrandSelected && !isNew)
+                {
+                    var allCars = Cars.Where(c => c.IsNew == false).ToList();
+                    CallCarUc(allCars);
+                }
+                if (!IsModelSelected && IsBrandSelected || isAll)
                 {
 
                     var allCars = Cars.Where(c => c.Model.BrandId == SelectionBrand.Id).ToList();
                     CallCarUc(allCars);
                 }
-                if (isNew)
+                if (isNew && IsBrandSelected)
                 {
                     var allCars = Cars.Where(c => c.Model.BrandId == SelectionBrand.Id && c.IsNew == true).ToList();
                     CallCarUc(allCars);
                 }
-                else if (!isNew && !isAll)
+                else if (!isNew && !isAll && IsBrandSelected)
                 {
                     var allCars = Cars.Where(c => c.Model.BrandId == SelectionBrand.Id && c.IsNew == false).ToList();
                     CallCarUc(allCars);
